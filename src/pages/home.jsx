@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <section className="flex flex-col items-center justify-center px-8 pt-7 sm:pt-16 md:flex-row md:justify-between">
       {/* Intro Text */}
-      <div className="mx-auto max-w-xs text-center sm:max-w-xl md:order-2 md:mx-0 md:text-right">
+      <div className="mx-auto max-w-xs text-center sm:max-w-[26rem] md:order-2 md:mx-0 md:text-right">
         <h1 className="mb-4 flex flex-wrap justify-center text-4xl font-bold text-envited-primary-blue-700 sm:text-[4rem] md:justify-end">
           Imagine if
           <span className="bg-gradient-to-r from-envited-primary-purple-500 to-envited-primary-pink-500 bg-clip-text text-transparent sm:py-6">

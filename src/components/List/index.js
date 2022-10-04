@@ -1,6 +1,4 @@
 import React from "react";
-//
-import ArrowIcon from "../../assets/ArrowIcon.svg";
 
 const List = ({ icon, maintext, subtext }) => {
   return (
@@ -10,7 +8,7 @@ const List = ({ icon, maintext, subtext }) => {
           {icon}
         </div>
         <div className="">
-          <h4 className="text-base font-bold text-envited-primary-blue-700 md:text-xl">
+          <h4 className="truncate text-base font-bold text-envited-primary-blue-700 md:text-xl">
             {maintext}
           </h4>
           <span className="text-sm text-envited-nuetral-gray-500 md:text-lg">

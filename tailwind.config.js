@@ -22,6 +22,13 @@ module.exports = {
         "envited-alert-green-500": "#00805E",
         "envited-alert-green-100": "#D3FFE2",
       },
+      backgroundSize: {
+        "size-200": "200% 200%",
+      },
+      backgroundPosition: {
+        "pos-0": "0% 0%",
+        "pos-100": "100% 100%",
+      },
     },
   },
   plugins: [],

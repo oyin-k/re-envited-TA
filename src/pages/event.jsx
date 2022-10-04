@@ -5,6 +5,17 @@ import CalendarIcon from "../assets/CalendarIcon.svg";
 import LocationIcon from "../assets/LocationIcon.svg";
 import EventImage from "../assets/Eventimage.png";
 const Event = () => {
+  const [eventData, setEventData] = React.useState([]);
+
+  React.useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("event_data"));
+    if (data) {
+      setEventData(data);
+    }
+  }, []);
+
+  console.log(eventData);
+
   return (
     <section className="flex flex-col sm:mx-auto sm:max-w-lg sm:px-8 sm:pt-16 md:mx-0 md:w-full md:max-w-none md:flex-row md:items-center md:justify-between">
       <div className="order-1 h-80 w-full sm:h-96 md:order-2 md:h-80 md:w-80 ">
@@ -18,10 +29,10 @@ const Event = () => {
         {/* Heading */}
         <div className="mb-8 px-5 pt-3 sm:px-0">
           <h3 className="text-2xl font-bold text-envited-primary-blue-700 sm:text-5xl">
-            Birthday Bash
+            {eventData.event_name}
           </h3>
           <span className="text-sm text-envited-nuetral-gray-500 sm:text-lg">
-            Hosted by <span className="font-bold">Elysia</span>
+            Hosted by <span className="font-bold">{eventData.host_name}</span>
           </span>
         </div>
         {/* List */}
@@ -131,8 +142,8 @@ const Event = () => {
                 </g>
               </svg>
             }
-            maintext="18 August 6:00PM"
-            subtext="to 19 August 1:00PM UTC +10"
+            maintext={eventData.start_date}
+            subtext={`to ${eventData.end_date}`}
           />
           <List
             icon={
@@ -183,8 +194,8 @@ const Event = () => {
                 </g>
               </svg>
             }
-            maintext="Street name"
-            subtext="Suburb, State, Postcode"
+            maintext={`${eventData.street_address} ${eventData.city}`}
+            subtext={`${eventData.city}, ${eventData.state}`}
           />
         </div>
       </div>
